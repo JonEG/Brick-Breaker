@@ -29,6 +29,7 @@ class Brick extends RectangleComponent
      *  but before the next tick of the game world.
      */
     removeFromParent();
+    game.score.value++;
 
     if (game.world.children.query<Brick>().length == 1) {
       game.playState = PlayState.won;
